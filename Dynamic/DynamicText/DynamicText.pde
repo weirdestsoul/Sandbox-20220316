@@ -1,11 +1,14 @@
-//Global Variables
+//Global Variable
 PFont titleFont;
 float titleX, titleY, titleWidth, titleHeight;
 String title = "Wahoo!!";
 color purple = #8346C1, resetDefaultInk = #FFFFFF;
 //
+void setup () 
+{
+fullScreen();
+//size (500, 600);
 //Display Geometry
-fullScreen();//size (500, 600);
 println(displayWidth, displayHeight);
 //Populatiom
 titleX = displayWidth*1/5;
@@ -21,6 +24,10 @@ titleFont = createFont("Comic Sans MS Bold", 55); //Verify the font exists in Pr
 //
 //Layout our text space and typographical features
 rect(titleX, titleY, titleWidth, titleHeight);
+} //end setup
+//
+void draw () 
+{
 //Drawing test
 fill(purple); //Ink, hexidecimal coby from colour selector
 textAlign(CENTER, CENTER); //Align X&Y, see Processing.org/reference
@@ -28,3 +35,13 @@ textAlign(CENTER, CENTER); //Align X&Y, see Processing.org/reference
 textFont(titleFont, 77); //Change the number until it fits
 text(title, titleX, titleY, titleWidth, titleHeight);
 fill(resetDefaultInk);
+} //end draw
+//
+void keyPressed () 
+{
+
+} //end keyPressed
+//
+void mousePressed () {} //end mousePressed
+//
+//end main
